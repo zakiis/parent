@@ -45,7 +45,7 @@
 		</dependency>
 		<dependency>
 	      <groupId>com.github.zakiis</groupId>
-		  <artifactId>zakiis-algorithm</artifactId>
+		  <artifactId>zakiis-common</artifactId>
 		  <version>${matic.version}</version>
 		</dependency>
 		
@@ -91,7 +91,14 @@
 		    <version>1.7.36</version>
 		</dependency>
 		
-	</dependencies>
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-databind</artifactId>
+		    <version>2.13.2</version>
+		</dependency>
+		
+	  </dependencies>
 	</dependencyManagement>
 	
 	<dependencies>
@@ -110,7 +117,7 @@
 	<modules>
 		<module>../exception</module>
 		<module>../security</module>
-		<module>../algorithm</module>
+		<module>../common</module>
 		<module>../spring</module>
 	</modules>
 </project>
