@@ -27,6 +27,20 @@
 					<target>${java.version}</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.0.1</version>
+				<executions>
+				  <execution>
+				  	<id>attach-sources</id>
+				  	<phase>verify</phase>
+				  	<goals>
+				  		<goal>jar-no-fork</goal>
+				  	</goals>
+				  </execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 	
@@ -48,6 +62,11 @@
 		  <artifactId>zakiis-common</artifactId>
 		  <version>${matic.version}</version>
 		</dependency>
+		<dependency>
+	      <groupId>com.github.zakiis</groupId>
+		  <artifactId>zakiis-spring</artifactId>
+		  <version>${matic.version}</version>
+		</dependency>
 		
 		<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk16 -->
 		<dependency>
@@ -67,7 +86,25 @@
 		    <artifactId>mybatis</artifactId>
 		    <version>3.5.9</version>
 		</dependency>
-		
+		<!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
+		<dependency>
+		    <groupId>org.mybatis.spring.boot</groupId>
+		    <artifactId>mybatis-spring-boot-starter</artifactId>
+		    <version>2.2.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>8.0.28</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.mybatis.generator/mybatis-generator-core -->
+		<dependency>
+		    <groupId>org.mybatis.generator</groupId>
+		    <artifactId>mybatis-generator-core</artifactId>
+		    <version>1.4.1</version>
+		</dependency>
+				
 		<dependency>
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-autoconfigure</artifactId>
@@ -76,6 +113,16 @@
 		<dependency>
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-configuration-processor</artifactId>
+		    <version>${springboot.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter</artifactId>
+		    <version>${springboot.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-test</artifactId>
 		    <version>${springboot.version}</version>
 		</dependency>
 		
@@ -98,6 +145,12 @@
 		    <version>2.13.2</version>
 		</dependency>
 		
+		<dependency>
+		  <groupId>org.junit.jupiter</groupId>
+	      <artifactId>junit-jupiter</artifactId>
+	      <version>5.8.2</version>
+		</dependency>
+		
 	  </dependencies>
 	</dependencyManagement>
 	
@@ -106,18 +159,13 @@
 		    <groupId>org.slf4j</groupId>
 		    <artifactId>slf4j-api</artifactId>
 		</dependency>
-	
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
-			<scope>test</scope>
-		</dependency>
 	</dependencies>
 	<modules>
 		<module>../exception</module>
 		<module>../security</module>
 		<module>../common</module>
 		<module>../spring</module>
+		<module>../springboot-test</module>
+		<module>../mybatis-generator</module>
 	</modules>
 </project>
