@@ -265,7 +265,7 @@
 		<module>../security</module>
 		<module>../common</module>
 		<module>../spring</module>
-		<module>../springboot-test</module>
+		<!-- <module>../springboot-test</module> -->
 		<!-- <module>../mybatis-generator</module> -->
 	</modules>
 </project>
