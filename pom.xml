@@ -19,6 +19,7 @@
 		<matic.version>0.0.2</matic.version>
 		<springboot.version>2.6.4</springboot.version>
 		<spring.version>5.3.17</spring.version>
+		<springcloud.version>3.1.1</springcloud.version>
 	</properties>
 
 	<licenses>
@@ -190,6 +191,13 @@
 				<artifactId>spring-boot-starter-web</artifactId>
 				<version>${springboot.version}</version>
 			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-feign -->
+			<dependency>
+			    <groupId>org.springframework.cloud</groupId>
+			    <artifactId>spring-cloud-starter-openfeign</artifactId>
+			    <version>${springcloud.version}</version>
+			</dependency>
+
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-test</artifactId>
@@ -218,6 +226,13 @@
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-databind</artifactId>
 				<version>2.13.2</version>
+			</dependency>
+			
+			<!-- https://mvnrepository.com/artifact/io.github.openfeign/feign-core -->
+			<dependency>
+			    <groupId>io.github.openfeign</groupId>
+			    <artifactId>feign-core</artifactId>
+			    <version>11.8</version>
 			</dependency>
 
 			<dependency>
