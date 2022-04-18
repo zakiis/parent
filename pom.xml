@@ -130,7 +130,7 @@
 			<dependency>
 				<groupId>io.github.zakiis</groupId>
 				<artifactId>zakiis-exception</artifactId>
-				<version>0.0.2</version>
+				<version>${matic.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>io.github.zakiis</groupId>
