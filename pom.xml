@@ -6,7 +6,7 @@
 
 	<groupId>io.github.zakiis</groupId>
 	<artifactId>zakiis-parent</artifactId>
-	<version>0.0.3</version>
+	<version>0.0.4</version>
 	<packaging>pom</packaging>
 
 	<name>zakiis-parent</name>
@@ -16,7 +16,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
-		<matic.version>0.0.3</matic.version>
+		<matic.version>0.0.4</matic.version>
 		<springboot.version>2.6.4</springboot.version>
 		<spring.version>5.3.17</spring.version>
 		<springcloud.version>3.1.1</springcloud.version>
@@ -130,17 +130,17 @@
 			<dependency>
 				<groupId>io.github.zakiis</groupId>
 				<artifactId>zakiis-exception</artifactId>
-				<version>${matic.version}</version>
+				<version>0.0.3</version>
 			</dependency>
 			<dependency>
 				<groupId>io.github.zakiis</groupId>
 				<artifactId>zakiis-common</artifactId>
-				<version>${matic.version}</version>
+				<version>0.0.3</version>
 			</dependency>
 			<dependency>
 				<groupId>io.github.zakiis</groupId>
 				<artifactId>zakiis-spring</artifactId>
-				<version>${matic.version}</version>
+				<version>0.0.3</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk16 -->
