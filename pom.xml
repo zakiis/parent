@@ -135,12 +135,12 @@
 			<dependency>
 				<groupId>io.github.zakiis</groupId>
 				<artifactId>zakiis-common</artifactId>
-				<version>0.0.3</version>
+				<version>${matic.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>io.github.zakiis</groupId>
 				<artifactId>zakiis-spring</artifactId>
-				<version>0.0.3</version>
+				<version>${matic.version}</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk16 -->
