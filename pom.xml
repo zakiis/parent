@@ -3,7 +3,6 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
 	<groupId>io.github.zakiis</groupId>
 	<artifactId>zakiis-parent</artifactId>
 	<version>0.0.4</version>
@@ -16,10 +15,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
-		<matic.version>0.0.4</matic.version>
-		<springboot.version>2.6.4</springboot.version>
+		<zakiis.version>0.0.4</zakiis.version>
 		<spring.version>5.3.17</spring.version>
-		<springcloud.version>3.1.1</springcloud.version>
 		<kettle.version>9.2.0.3-480</kettle.version>
 	</properties>
 	
@@ -124,23 +121,27 @@
 			<dependency>
 				<groupId>io.github.zakiis</groupId>
 				<artifactId>zakiis-security</artifactId>
-				<version>${matic.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>io.github.zakiis</groupId>
-				<artifactId>zakiis-exception</artifactId>
-				<version>0.0.3</version>
+				<version>${zakiis.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>io.github.zakiis</groupId>
 				<artifactId>zakiis-common</artifactId>
-				<version>${matic.version}</version>
+				<version>${zakiis.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>io.github.zakiis</groupId>
 				<artifactId>zakiis-spring</artifactId>
-				<version>${matic.version}</version>
+				<version>${zakiis.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.github.zakiis</groupId>
+				<artifactId>zakiis-job</artifactId>
+				<version>${zakiis.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.github.zakiis</groupId>
+				<artifactId>zakiis-starter</artifactId>
+				<version>${zakiis.version}</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk16 -->
@@ -148,11 +149,6 @@
 				<groupId>org.bouncycastle</groupId>
 				<artifactId>bcprov-jdk15to18</artifactId>
 				<version>1.70</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.commons</groupId>
-				<artifactId>commons-lang3</artifactId>
-				<version>3.12.0</version>
 			</dependency>
 
 			<dependency>
@@ -178,74 +174,22 @@
 				<artifactId>mybatis-generator-core</artifactId>
 				<version>1.4.1</version>
 			</dependency>
-
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-autoconfigure</artifactId>
-				<version>${springboot.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-configuration-processor</artifactId>
-				<version>${springboot.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter</artifactId>
-				<version>${springboot.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-web</artifactId>
-				<version>${springboot.version}</version>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-feign -->
+			
+			<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-dependencies -->
 			<dependency>
 			    <groupId>org.springframework.cloud</groupId>
-			    <artifactId>spring-cloud-starter-openfeign</artifactId>
-			    <version>${springcloud.version}</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.springframework.cloud</groupId>
-			    <artifactId>spring-cloud-openfeign-core</artifactId>
-			    <version>${springcloud.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-test</artifactId>
-				<version>${springboot.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-core</artifactId>
-				<version>${spring.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-web</artifactId>
-				<version>${spring.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-api</artifactId>
-				<version>1.7.36</version>
-			</dependency>
-
-			<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
-			<dependency>
-				<groupId>com.fasterxml.jackson.core</groupId>
-				<artifactId>jackson-databind</artifactId>
-				<version>2.13.2</version>
+			    <artifactId>spring-cloud-dependencies</artifactId>
+			    <version>2021.0.2</version>
+			    <type>pom</type>
+			    <scope>import</scope>
 			</dependency>
 			
-			<!-- https://mvnrepository.com/artifact/io.github.openfeign/feign-core -->
 			<dependency>
-			    <groupId>io.github.openfeign</groupId>
-			    <artifactId>feign-core</artifactId>
-			    <version>11.8</version>
+				<groupId>org.springframework.boot</groupId>
+			    <artifactId>spring-boot-dependencies</artifactId>
+			    <version>2.6.4</version>
+			    <type>pom</type>
+			    <scope>import</scope>
 			</dependency>
 
 			<dependency>
@@ -311,11 +255,12 @@
 	</distributionManagement>
 
 	<modules>
-		<module>../exception</module>
-		<module>../security</module>
 		<module>../common</module>
+		<module>../security</module>
 		<module>../spring</module>
-		<!-- <module>../springboot-test</module> -->
+		<module>../starter</module>
+		<module>../job</module>
+		<!-- <module>../test</module> -->
 		<!-- <module>../mybatis-generator</module> -->
 	</modules>
 </project>
