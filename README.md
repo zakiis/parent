@@ -39,7 +39,7 @@ Manage the common part of this framework like jar version, plugins, distribution
 
 ## common
 
-Common Module contains util class that we used frequently and exception structure. click here to [learn more](https://github.com/zakiis/common/blob/main/README.md)
+Common Module contains util class that we used frequently and exception structure. click [here](https://github.com/zakiis/common/blob/main/README.md) to learn more.
 
 ## security
 
